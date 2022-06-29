@@ -1,25 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React, {useState, useEffect} from "react";
+import Home from "./components/Home"; //importar el componente Home para usarlo en app.js
+import Login from "./components/Login"; //importar el componente Login para usarlo en app.js 
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [usuarioGlobal, setUsuarioGlobal] = useState(null); //
+  return <>{usuarioGlobal ? <Home /> : <Login />}</>  //en caso de que no este logueado le muestre login, operador ternarios
 }
 
 export default App;
