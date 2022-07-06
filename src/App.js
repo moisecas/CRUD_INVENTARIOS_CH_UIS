@@ -19,7 +19,13 @@ function App() { //validando
       setUsuarioGlobal(null); //null en caso de cierre de seisión, actualizamos el estado 
     }
   })
-  return <>{usuarioGlobal ? <Home /> : <Login />}</>  //en caso de que no este logueado le muestre login, operador ternarios
+  return <>
+  {usuarioGlobal ? (
+    <Home correoUsuario={usuarioGlobal.email} /> //si el usuario existe, muestra el componente Home
+  ) : (
+    <Login />
+  )}
+</>  //en caso de que no este logueado le muestre login, operador ternarios
 }
 
 export default App;
