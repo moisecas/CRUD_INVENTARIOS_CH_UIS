@@ -9,6 +9,7 @@ const auth = getAuth(firebaseApp);
 
 
 function App() { //validando 
+  
   const [usuarioGlobal, setUsuarioGlobal] = useState(null); 
   onAuthStateChanged(auth, (usuarioFirebase) => { //recibe el usuario de firebase, y lo guarda en el estado
     if (usuarioFirebase) { //evalua si el usuario existe en firebase 

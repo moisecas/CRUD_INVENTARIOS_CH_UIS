@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Stack, Container, Form, Button} from "react-bootstrap"; 
 
 import firebaseApp from '../Credenciales.js'; //importar el archivo credenciales.js
+
 import {getAuth, createUserWithEmailAndPassword, 
     signInWithEmailAndPassword, 
     signInWithRedirect, GoogleAuthProvider} from "firebase/auth"; //autenticación con firebase, cada funcion hace algo distinto
@@ -18,7 +19,7 @@ const Login = () => { //registrando
    
    
     if (estaRegistrandose) {//si estaRegistrandose es true, es porque estoy registrando
-        const user = await createUserWithEmailAndPassword(auth, email, password) //crear usuario con email y password, promesa
+        const usuario = await createUserWithEmailAndPassword(auth, email, password) //crear usuario con email y password, promesa
 
     }else{
         signInWithEmailAndPassword(auth, email, password) //iniciar sesión con email y password, promesa
