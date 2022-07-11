@@ -1,4 +1,3 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app"; //a esta función le paso el objeto de configuración, las credenciales
 
 // TODO: Add SDKs for Firebase products that you want to use
